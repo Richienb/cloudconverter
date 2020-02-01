@@ -1,3 +1,6 @@
+# Automatically generated
+fixtures/file*.jpg
+
 # Visual Studio Code
 
 .vscode/*

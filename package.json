@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "cloudconverter",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "A simplified interface to the CloudConvert API.",
+	"repository": "https://github.com/Richienb/cloudconverter.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -15,10 +15,26 @@
 	},
 	"scripts": {
 		"lint": "xo",
-		"test": "yarn lint && ava"
+		"test": "yarn lint && ava --timeout 1m"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"cloudconvert",
+		"api",
+		"stream",
+		"file",
+		"convert",
+		"extensions",
+		"path",
+		"filename",
+		"http"
+	],
+	"dependencies": {
+		"cloudconvert": "^2.0.0",
+		"fs-extra": "^8.1.0",
+		"got": "^10.4.0",
+		"is-stream": "^2.0.0",
+		"ow": "^0.15.1"
+	},
 	"devDependencies": {
 		"ava": "^3.0.0",
 		"eslint-config-richienb": "^0.3.0",

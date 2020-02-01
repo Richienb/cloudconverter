@@ -1,41 +1,80 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# CloudConverter [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/cloudconverter/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/cloudconverter)
 
-My awesome module.
+A simplified interface to the CloudConvert API.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/cloudconverter.png)](https://npmjs.com/package/cloudconverter)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install cloudconverter
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const cloudConverter = require("cloud-converter");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+	await cloudConverter("input.png", "output.jpg", { apiKey: ... }); // Convert PNG to JPG
+})();
 ```
 
 ## API
 
-### theModule(input, options?)
+### cloudConverter(filename, output, options)
 
-#### input
+#### filename
 
 Type: `string`
 
-Lorem ipsum.
+The input filename.
+
+#### output
+
+Type: `string`
+
+The output filename.
 
 #### options
 
 Type: `object`
 
-##### postfix
+##### apiKey
 
-Type: `string`\
-Default: `rainbows`
+Type: `string`
 
-Lorem ipsum.
+The CloudConvert API key.
+
+##### sandbox
+
+Type: `boolean`\
+Default: `false`
+
+Use sandbox mode.
+
+### cloudConverter.stream(input, output, format, options)
+
+#### input
+
+Type: `ReadableStream`
+
+The input stream.
+
+#### output
+
+Type: `WritableStream`
+
+The output stream.
+
+#### format
+
+Type: `string`
+
+The format to convert to.
+
+#### options
+
+Type: `object`
+
+See [options](#options).
